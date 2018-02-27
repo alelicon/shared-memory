@@ -1,0 +1,15 @@
+
+all: SharedMemory
+
+SharedMemory: SharedMemory.o
+	cc -o SharedMemory SharedMemory.o -lrt
+
+SharedMemory.o: SharedMemory.c
+	cc -c SharedMemory.c
+
+clean:
+	rm -f *.o SharedMemory
+	rm -f *.o SharedMemory
+
+demo: SharedMemory
+	./SharedMemory
